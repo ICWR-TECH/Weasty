@@ -46,7 +46,7 @@ $alert="<!-- DOCTYPE html -->
 
 function weasty_logger($ip) {
     $x=fopen("threat_log", "a");
-    fwrite($x, $ip." ( ".date("r")." ) "." => ".$_SERVER['HTTP_REQUEST_URI']);
+    fwrite($x, $ip." ( ".date("r")." ) "." => ".$_SERVER['REQUEST_URI']."\n");
     fclose($x);
 }
 function weasty_add_ip($ip, $time) {
