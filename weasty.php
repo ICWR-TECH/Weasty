@@ -46,7 +46,7 @@ $alert="<!-- DOCTYPE html -->
 
 function weasty_logger($ip) {
     $x=fopen("threat_log", "a");
-    fwrite($x, $ip." ( ".date("r")." ) "." => ".$_SERVER['REQUEST_URI']."\n");
+    fwrite($x, $ip." ( ".$_SERVER['HTTP_USER_AGENT']." ".date("r")." ) "." => ".$_SERVER['REQUEST_URI']."\n");
     fclose($x);
 }
 function weasty_add_ip($ip, $time) {
@@ -66,7 +66,7 @@ function weasty_del_ip($ip, $time) {
 }
 
 $malicious="/alert\(|alert \(|<|>|\"|\||\'|information_schema|\/var|\/etc|\/home|file_get_contents|shell_exec|table_schema|user\(\)|user \(\)/";
-$weasty_user_agent="/Mozilla|Chrome/";
+$weasty_user_agent="/Mozilla|Chrome|Google|WhatsApp|Telegram/";
 
 if(!empty($_GET)) {
     foreach($_GET as $weasty_get_request) {
