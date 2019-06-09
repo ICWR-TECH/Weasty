@@ -65,7 +65,7 @@ function weasty_del_ip($ip, $time) {
     fclose($f);
 }
 
-$malicious="/alert\(|alert \(|<|>|\"|\||\'|information_schema|\/var|\/etc|\/home|file_get_contents|shell_exec|table_schema|user\(\)|user \(\)/";
+$malicious="/alert\(|alert \(|<|>|\"|\||\'|information_schema|\/var|\/etc|\/home|file_get_contents|shell_exec|\(|\)|table_schema|user\(\)|user \(\)/";
 $weasty_user_agent="/Mozilla|Chrome|Google|WhatsApp|Telegram/";
 
 if(!empty($_GET)) {
