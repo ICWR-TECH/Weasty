@@ -35,7 +35,7 @@ $alert="<!-- DOCTYPE html -->
             <br><br>
             Your Request Is Blocked Server Detect The Malicious Code, Threat Blocker Is Actived
             <br><br>
-            Powered By <a href='http://icwr-tech.id'>ICWR-TECH</a>
+            Powered By <a href='https://github.com/ICWR-TECH'>ICWR-TECH</a>
             </i><b>
         </td>
     </table>
